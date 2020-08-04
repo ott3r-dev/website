@@ -22,9 +22,12 @@
   var ctx = document.getElementById('ott3r').getContext('2d');
   var image = new Image();
   var frame = 0;
+  var width = 82;
+  var height = 67;
   image.onload = function () {
    function animate() {
-    ctx.drawImage(image, frame * 82, 0, 82, 67, 0, 0, 82, 67);
+    ctx.clearRect(0, 0, width, height);
+    ctx.drawImage(image, frame * width, 0, width, height, 0, 0, width, height);
     frame++;
     frame = frame % 8;
     setTimeout(() => {
