@@ -24,7 +24,7 @@
   var frame = 0;
   image.onload = function () {
    function animate() {
-    ctx.drawImage(image, 0, 0, frame * 82, 0);
+    ctx.drawImage(image, frame * 82, 0);
     frame++;
     frame = frame % 8;
     setTimeout(() => {
