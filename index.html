@@ -21,8 +21,17 @@
  <script type="text/javascript">
   var ctx = document.getElementById('ott3r').getContext('2d');
   var image = new Image();
+  var frame = 0;
   image.onload = function () {
-      ctx.drawImage(image, 0, 0);
+   function animate() {
+    ctx.drawImage(image, 0, 0, frame * 82, 0);
+    frame++;
+    frame = frame % 8;
+    setTimeout(() => {
+     requestAnimationFrame(animate);
+    }, 1000 / 4);
+   }
+   animate();
   }
   image.src = './ott3r_sprite.png';
  </script>
