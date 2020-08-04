@@ -15,16 +15,16 @@
  }
 </style>
 <title>ott3r</title>
-<script>
- var ctx = document.getElementById('ott3r').getContext('2d');
- var image = new Image();
- image.onload = function () {
-     ctx.drawImage(image, 0, 0);
- }
- image.src = './ott3r_sprite.png';
-</script>
 </head>
 <body>
  <canvas id="ott3r" width="82" height="67"></canvas>
+ <script type="text/javascript">
+  var ctx = document.getElementById('ott3r').getContext('2d');
+  var image = new Image();
+  image.onload = function () {
+      ctx.drawImage(image, 0, 0);
+  }
+  image.src = './ott3r_sprite.png';
+ </script>
 </body>
 </html>
