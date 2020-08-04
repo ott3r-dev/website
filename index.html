@@ -3,14 +3,28 @@
 <link href="favicon.ico" rel="icon" type="image/x-icon" />
 <style type="text/css">
  body {
-  background-image: url(ott3r.gif);
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #6A5ACD;
+ }
+ canvas {  
+  width: 328px;
+  height: 268px;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
  }
 </style>
 <title>ott3r</title>
+<script>
+ var ctx = document.getElementById('ott3r').getContext('2d');
+ var image = new Image();
+ image.onload = function () {
+     ctx.drawImage(image, 0, 0);
+ }
+ image.src = './ott3r_sprite.png';
+</script>
 </head>
 <body>
+ <canvas id="ott3r" width="82" height="67"></canvas>
 </body>
 </html>
