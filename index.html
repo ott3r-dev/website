@@ -36,7 +36,7 @@
     ctx.clearRect(0, 0, width, height);
     ctx.drawImage(image, frame * width, 0, width, height, 0, 0, width, height);
     if (frame == 3 && anim_dir > 0 && Math.random() > 0.25) {
-     dir = -1;
+     anim_dir = -1;
     }
     frame = frame + anim_dir;
     if (frame < 0) {
